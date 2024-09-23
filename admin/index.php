@@ -18,19 +18,21 @@
 
     <title><?php echo gera_titulo("Sistema de postagem", true, $con);?></title>
   </head>
-  <body>
-<br>
-  <div class="content">
+  <body class="m-0">
+  <div class="content m-0">
     <div class="row">
       <?php if(isset($_SESSION['usuarioID'])){?>
-      <div class="col-sm-3" id="menu-principal">
+      <div class="col-md-2" id="menu-principal">
         <ul>
+        <li class="title"><a>Home</a></li>
+        <li class="sub"><a href="admin/dashboard">Dashboard</a></li>
           <li class="title"><a>Publicações</a></li>
             <li class="sub"><a href="admin/publicar">Publicar</a></li>
             <li class="sub"><a href="admin/gerenciar-posts">Gerenciar Publicações</a></li>
+            <li class="title"><a>Configurações</a></li>
 
-          <li class="menu"><a href="admin/perfil">Editar perfil</a></li>
-          <li class="menu"><a href="admin/sair">Sair</a></li>
+          <li class="sub"><a href="admin/perfil">Editar perfil</a></li>
+          <li class="sub"><a href="admin/sair">Sair</a></li>
         </ul>
       </div>
     <?php }?>
